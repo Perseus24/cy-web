@@ -1,0 +1,28 @@
+
+document.addEventListener('DOMContentLoaded', (event) => {
+
+    var get_in_touch_btn = document.getElementById('get_in_touch_btn');
+    var explore_me_btn = document.getElementById('explore_me_btn');
+
+    get_in_touch_btn.addEventListener('mouseover', () => {
+        explore_me_btn.style.backgroundColor = 'white';
+        explore_me_btn.style.color = '#512DCD';
+    })
+
+    get_in_touch_btn.addEventListener('mouseout', () => {
+        explore_me_btn.style.backgroundColor = '';
+        explore_me_btn.style.color = '';
+    })
+
+    explore_me_btn.addEventListener('mouseover', () => {
+        get_in_touch_btn.style.backgroundColor = 'transparent';
+        get_in_touch_btn.style.color = 'white';
+        get_in_touch_btn.style.border = '1px solid white';
+    })
+
+    explore_me_btn.addEventListener('mouseout', () => {
+        get_in_touch_btn.style.backgroundColor = '';
+        get_in_touch_btn.style.color = '';
+        get_in_touch_btn.style.border = '';
+    })
+})
