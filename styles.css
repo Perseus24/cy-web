@@ -114,7 +114,7 @@ header{
     margin: 15px 0 0 0;
 }
 
-.image_container .button{
+.landing_buttons .button{
     background-color: white;
     color: #512DCD;
     border: none;
@@ -264,6 +264,36 @@ nav{
     margin-right: 10px;
 }
 
+@media screen  and (max-width: 600px){
+
+    .image_container{
+        background: url('images/small_width.png') no-repeat center center/cover;
+        /* background-attachment: fixed; */
+        padding: 50px 20px 0 20px;
+        justify-content: start;
+        text-align: center;
+    }
+
+    .image_container h2{
+        margin-top: 70px;
+    }
+
+    .image_container p, h2, h1{
+        width: 100%;
+    }
+
+    .landing_buttons{
+        margin: 70px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .landing_buttons .button{
+        margin-bottom: 20px;
+    }
+}
 @media screen  and (max-width: 760px){
 
     .image_container{
