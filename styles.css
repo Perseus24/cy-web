@@ -292,9 +292,9 @@ nav{
 
 @media screen  and (max-width: 693px){
 
-    /* * {
+    * {
         border: 1px solid black;
-    } */
+    }
 
     body{
         justify-content: center;
@@ -319,6 +319,7 @@ nav{
     }
 
     .landing_page{
+        background: url('images/landing_page_cover_mobile.png') no-repeat center center/cover;
         padding: 50px 0 0px 0;
         flex-direction: column;
         justify-content: start;
@@ -327,7 +328,6 @@ nav{
         background-position: center;
         height: auto;
     }
-
 
     .landing_page img{
         order: -1;      /* Makes the image to the top of the column  */
@@ -360,6 +360,16 @@ nav{
         margin-bottom: 20px;
         margin-right: 0px;
     }
+
+    .services, .projects{
+        margin-top: 40px;
+        padding: 10px 20px 10px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+
 }
 @media screen  and (min-width: 694px) and (max-width: 1024px){
 
