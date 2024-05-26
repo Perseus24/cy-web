@@ -25,6 +25,17 @@ body{
     align-items: left;
 }
 
+.buttons_arrow{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons_arrow img{
+    margin: 40px 0 0 40px;
+    max-width: 10vw;
+    max-height: 7vw;
+}
+
 footer{
     height: 200px;
     background-color: #142A2E;
@@ -78,19 +89,14 @@ header{
 }
 
 .image_container{
-    height: 100vh;
-    background: url('images/sample_back.png') no-repeat center center/cover;
-    /* background-attachment: fixed; */
-    background-size: cover;
-    background-position: center;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     text-align: left;
-    padding: 0 10px 0 100px;
     color: white;
+
+    margin-top: 25vh;
 }
 
 .image_container p,h1,h2, .landing_buttons{
@@ -114,6 +120,26 @@ header{
     margin: 15px 0 0 0;
 }
 
+.landing_page{
+    border: 1px solid black;
+    height: 100vh;
+    background: url('images/background.png') no-repeat center center/cover;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+
+
+    padding: 0 100px 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.landing_page img{
+    width: 35vw;
+    height: 35vw;
+}
 .landing_buttons .button{
     background-color: white;
     color: #512DCD;
@@ -264,18 +290,58 @@ nav{
     margin-right: 10px;
 }
 
-@media screen  and (max-width: 600px){
+@media screen  and (max-width: 693px){
+
+    /* * {
+        border: 1px solid black;
+    } */
+
+    body{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons_arrow{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0 20px 0;
+    }
+
+    .buttons_arrow .landing_buttons{
+        order: -1;  /* Makes the button on top and the arrow on the bottom */
+    }
+
+    .buttons_arrow img{
+        margin: 0;
+        max-width: auto;
+        max-height: auto;
+    }
+
+    .landing_page{
+        padding: 50px 0 0px 0;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        height: auto;
+    }
+
+
+    .landing_page img{
+        order: -1;      /* Makes the image to the top of the column  */
+    }
 
     .image_container{
-        background: url('images/small_width.png') no-repeat center center/cover;
-        /* background-attachment: fixed; */
-        padding: 50px 20px 0 20px;
+        margin-top: 10px;
+        padding: 20px 20px 0 20px;
         justify-content: start;
         text-align: center;
     }
 
     .image_container h2{
-        margin-top: 70px;
+        margin-top: 0px;
     }
 
     .image_container p, h2, h1{
@@ -283,21 +349,28 @@ nav{
     }
 
     .landing_buttons{
-        margin: 70px 0 0 0;
+        margin: 0px 0 0 0;
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
     }
 
     .landing_buttons .button{
         margin-bottom: 20px;
+        margin-right: 0px;
     }
 }
-@media screen  and (max-width: 760px){
+@media screen  and (min-width: 694px) and (max-width: 1024px){
 
+    .landing_page{
+        padding: 100px 100px 50px 100px;
+        align-items: center;
+        height: 80vh;
+    }
     .image_container{
         padding: 0 10px 0 20px;
+        margin-top: 0;
     }
 
     .about p{
