@@ -20,7 +20,7 @@ nav a{
 }
 
 body{
-    font-family: Arial, sans-serif;
+    font-family: NexaLight;
     justify-content: space-evenly;
     align-items: left;
 }
@@ -37,9 +37,11 @@ body{
 }
 
 footer{
-    height: 200px;
+    height: auto;
+    width: auto;
     background-color: #142A2E;
-    margin: 10px 70px 10px 70px;
+    
+    padding: 3vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -49,10 +51,13 @@ footer{
 footer div{
     display: flex;
     align-items: center;
+    margin-right: 15px;
+    margin-bottom: 0px;
 }
 
 footer div p{
     font-weight: bold;
+    margin:0;
 }
 
 footer div h5{
@@ -63,7 +68,7 @@ footer div h5{
 .footer_links{
     display: flex;
     flex-direction: column;
-    margin-right: 25px;
+    align-items: start
 }
 
 h2, h5, p{
@@ -121,7 +126,6 @@ header{
 }
 
 .landing_page{
-    border: 1px solid black;
     height: 100vh;
     background: url('images/background.png') no-repeat center center/cover;
     /* background-attachment: fixed; */
@@ -133,7 +137,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
 }
 
 .landing_page img{
@@ -195,12 +198,14 @@ header{
 }
 
 .link_name a, .other_logos, a{
-    margin:0;
+    margin-left:0;
+    margin-right: 10px;
 }
+
 
 .other_logos{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .overlay{
@@ -213,6 +218,22 @@ header{
 
 .projects_table{
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.project_images{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 10px;
+}
+
+.project_images_row{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.project_images img{
+    height: 100%;
 }
 
 nav{
@@ -255,9 +276,9 @@ nav{
     color: green;
 }
 
-.services_card, .projects_card, h4, p, a{
+.services_card h4, .services_card p , .services_card a{
     margin-left: 20px;
-    margin-right: 20px
+    margin-right: 20px  
 }
 
 .services_card, .projects_card, img{
@@ -265,36 +286,17 @@ nav{
     height: auto;
 }
 
-.project_images{
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-bottom: 10px;
-}
-
-.project_images_row{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
-}
-
-.project_images img{
-    height: 100%;
-}
-
 .scaled_image {
     max-height: 200px; 
     width: auto; 
 }
 
-.other_logos img{
-    margin-right: 10px;
-}
 
 @media screen  and (max-width: 693px){
 
-    * {
+    /* * {
         border: 1px solid black;
-    }
+    } */
 
     body{
         justify-content: center;
@@ -318,6 +320,30 @@ nav{
         max-height: auto;
     }
 
+    footer{
+        height: auto;
+        margin: 20px 0 0 0;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 15px 15px 15px;
+    }
+
+    footer div:nth-child(2) p{
+        margin-top: 15px;
+        font-weight: normal;
+    }
+    
+    
+    .footer_links{
+        align-items: start;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    header nav{
+        display: none;
+    }
+
     .landing_page{
         background: url('images/landing_page_cover_mobile.png') no-repeat center center/cover;
         padding: 50px 0 0px 0;
@@ -331,6 +357,13 @@ nav{
 
     .landing_page img{
         order: -1;      /* Makes the image to the top of the column  */
+    }
+
+    .link_name{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 15px;
     }
 
     .image_container{
@@ -361,12 +394,44 @@ nav{
         margin-right: 0px;
     }
 
+
+    .other_logos img{
+        height: 25px;
+        width: 25px;
+        margin-right: 10px;
+    }
+
+    .other_logos{
+        width: 100%;
+        display:flex;
+        justify-content: center;
+    }
+
     .services, .projects{
         margin-top: 40px;
-        padding: 10px 20px 10px 20px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+    }
+
+    .services_card, .projects_card, h4, p, a{
+        margin-left: 0px;
+        margin-right: 0px
+    }
+
+    .services_card h4, p{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .services h2{
+        width: 100%;
+    }
+
+    .services_table, .projects_table{
+        margin-top: 10px;
     }
     
 
@@ -412,7 +477,7 @@ nav{
         width: auto;
     }
 
-    footer{
+    /* footer{
         padding-top: 20px;
         height: auto;
         display: flex;
@@ -420,15 +485,11 @@ nav{
         justify-content: space-evenly;
         align-items: center;
         text-align: center
-    }
+    } */
 
-    footer div{
-        margin-bottom: 20px;
-    }
-
-    .other_logos{
+    /* .other_logos{
         justify-content: center;
-    }
+    } */
 
     .services, .projects{
         align-items: center;

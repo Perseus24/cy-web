@@ -27,14 +27,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     })
 })
 
-window.addEventListener('resize', function () {
+// window.addEventListener('resize', function () {
 
-    var navigation = document.querySelector('header nav');        /*Finds the specific element*/
+//     var navigation = document.querySelector('header nav');        /*Finds the specific element*/
 
-    if (window.innerWidth <= 600) {
-        navigation.style.display = 'none';
-    } else {
-        navigation.style.display = '';
-    }
+//     if (window.innerWidth <= 600) {
+//         navigation.style.display = 'none';
+//     } else {
+//         navigation.style.display = '';
+//     }
 
-})
+// })
