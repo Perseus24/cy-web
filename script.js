@@ -27,6 +27,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     })
 })
 
+function myFunction() {
+    var showNav = document.querySelector('header nav');
+    if (showNav.style.display === "block") {
+        showNav.style.display = "none";
+    } else {
+        showNav.style.display = "block";
+    }
+}
+
 // window.addEventListener('resize', function () {
 
 //     var navigation = document.querySelector('header nav');        /*Finds the specific element*/
