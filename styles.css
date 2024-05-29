@@ -358,11 +358,13 @@ nav{
         padding: 25px 15px 15px 15px;
     }
 
+    footer div{
+        margin-right: 0;
+    }
     footer div:nth-child(2) p{
         margin-top: 15px;
         font-weight: normal;
     }
-    
     
     .footer_links{
         align-items: start;
@@ -370,6 +372,16 @@ nav{
         margin-top: 20px;
     }
 
+    
+    .footer_split{
+        justify-content: space-between;
+
+    }
+    
+    .footer_split > div:nth-child(1){   /* direct children of only the footer_split*/
+        margin-right: 40px;
+        margin-left: 10px;
+    }
     
     header{
         height: auto;
@@ -546,25 +558,12 @@ nav{
         width: auto;
     }
 
-    /* footer{
-        padding-top: 20px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: center
-    } */
-
-    /* .other_logos{
-        justify-content: center;
-    } */
-
     .services, .projects{
         align-items: center;
         text-align: center;
     }
 }
+
 
 /* Keyframes for animations */
 
