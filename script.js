@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     var get_in_touch_btn = document.getElementById('get_in_touch_btn');    /*Finds the id*/
     var explore_me_btn = document.getElementById('explore_me_btn');
 
+    var hovered_nav = document.querySelector('header nav');
+    var active_nav = document.getElementById('active');
+
     get_in_touch_btn.addEventListener('mouseover', () => {
         explore_me_btn.style.backgroundColor = 'white';
         explore_me_btn.style.color = '#512DCD';
@@ -25,6 +28,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         get_in_touch_btn.style.color = '';
         get_in_touch_btn.style.border = '';
     })
+
+    hovered_nav.addEventListener('mouseover', () => {
+        active_nav.style.borderBottom = '0px solid white';
+    })
+
+    hovered_nav.addEventListener('mouseout', () => {
+        active_nav.style.borderBottom = '';
+    })
+
 })
 
 function myFunction() {

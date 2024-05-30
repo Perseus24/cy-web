@@ -10,14 +10,15 @@
 
 * {
     font-family: NexaLight;
-    /* border: 2px solid black; */
+    /* border: 1px solid black; */
 }
 
-/* nav a{
-    padding: 10px;
-    text-decoration: none;
-    color: black
-} */
+#active, nav a:hover{
+    padding-bottom: 5px;
+    border-bottom: 2px solid #512DCD;
+}
+
+
 
 body{
     font-family: NexaLight;
@@ -226,8 +227,10 @@ header a.icon{
 nav a{
     padding: 10px;
     text-decoration: none;
-    color: black
+    color: black;
+    transition: border-bottom 0.1s ease;
 }
+
 
 nav{
     justify-content: space-between;
@@ -319,6 +322,66 @@ nav{
 .scaled_image {
     max-height: 200px; 
     width: auto; 
+}
+
+
+
+/* CSS FOR THE PROJECTS.HTML */
+
+@keyframes show {
+    0% {margin-top:-270px;}
+    5% {margin-top:-180px;}
+    33% {margin-top:-180px;}
+    38% {margin-top:-90px;}
+    66% {margin-top:-90px;}
+    71% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-270px;}
+}
+
+/* section *{
+    border: 1px solid black;
+} */
+
+.project_latest{
+    height: auto;
+    background-color: black;
+    color: white;
+    padding: 50px 70px;
+    font-size:20px;
+    font-weight:bold;
+    display: flex;
+    margin-bottom: 30px;
+
+    background: url('images/Art.jfif') no-repeat center center/cover;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+}
+
+.text_flip_container > p{
+    margin-left: 0px;
+    margin-bottom: 30px;
+    font-size:28px;
+}
+
+.text_flip{
+    height: 50px;
+    overflow: hidden;
+}
+
+.text_flip > div > div {
+    color:#fff;
+    padding:4px 0px;
+    height:45px;
+    margin-bottom:45px;
+    display:inline-block;
+
+    
+  }
+
+.text_flip div:first-child{
+    animation: show 8s linear infinite;
 }
 
 
@@ -488,6 +551,10 @@ nav{
         justify-content: center;
     }
 
+    .project_latest{
+        padding: 50px 30px;
+    }
+
     .services, .projects{
         margin-top: 40px;
         padding: 10px;
@@ -514,7 +581,18 @@ nav{
     .services_table, .projects_table{
         margin-top: 10px;
     }
+
+    /* .text_flip{
+        height: 70px;
+        overflow: hidden;
+    } */
+    .text_flip{
+        height: 70px;
+    }
     
+    .text_flip > div > div {
+        padding:25px 0px;    
+      }
 
 }
 @media screen  and (min-width: 694px) and (max-width: 1024px){
@@ -642,3 +720,16 @@ nav{
 }
 
 
+
+/* .text_flip div:first-child div{
+    background:#4ec7f3;
+}
+
+.text_flip div div {
+    background:#42c58a;
+  }
+
+
+.text_flip div:last-child div{
+    background:#DC143C;
+} */
