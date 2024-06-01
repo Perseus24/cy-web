@@ -18,7 +18,9 @@
     border-bottom: 2px solid #512DCD;
 }
 
-
+h1{
+    font-family: NexaBold;
+}
 
 body{
     font-family: NexaLight;
@@ -126,7 +128,10 @@ header a.icon{
     margin-top: 25vh;
 }
 
-.image_container p,h1,h2, .landing_buttons{
+.image_container > p,
+.image_container > h1,
+.image_container > h2,
+.image_container > .landing_buttons{
     width: 40vw;
 }
 
@@ -248,6 +253,18 @@ nav{
     left: 40%;
     background-color: rgba(255,255,255,0.2);
 }  
+
+.projects_list{
+    margin-top: 40px;
+    padding: 10px 70px 70px 70px;
+}
+
+.projects_list_table{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
 
 .projects_table{
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -384,6 +401,112 @@ nav{
     animation: show 8s linear infinite;
 }
 
+
+/* CSS FOR THE ABOUT ME.HTML */
+
+/* .about_me_section *{
+    border: 1px solid black;
+} */
+
+.about_me_section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+.construction_img{
+
+    background: url('images/under_construction.png') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+
+    height: 200px;
+    width: 200px;
+
+    margin-right: 30px;
+}
+
+.construction_title{
+    color: #F89916;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    width: 500px;
+}
+
+.construction_title > h1,
+.construction_title > h3{
+    width: auto;
+    word-wrap: break-word;
+    letter-spacing: 1.5px; 
+}
+
+.construction_title > h1{
+    font-size: 60px;
+    margin: 0 auto;
+}
+
+.construction_title > h3{
+    margin: 0;
+}
+.construction_title > h3:first-of-type{
+    margin: 0;
+}
+
+.construction_title > h3:nth-of-type(2),
+.construction_title > h3:nth-of-type(3),
+.construction_title > h3:nth-of-type(4){
+    margin: 20px 0 0 0;
+}
+
+.reverse_countdown{
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+}
+
+.reverse_countdown > div{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    border: 6px solid #F89916;
+    margin-right: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.reverse_countdown > div > p,
+.reverse_countdown > div > h1{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+
+.reverse_countdown > div > p{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: black;
+    color: white;
+}
+
+
+.reverse_countdown > div > h1{
+    font-size: 50px;
+}
+
+
+
+
+
+/* RESPONSIVENESS FOR MOBILE SCREENS */
 
 @media screen  and (max-width: 693px){
 
@@ -582,10 +705,6 @@ nav{
         margin-top: 10px;
     }
 
-    /* .text_flip{
-        height: 70px;
-        overflow: hidden;
-    } */
     .text_flip{
         height: 70px;
     }
@@ -593,6 +712,49 @@ nav{
     .text_flip > div > div {
         padding:25px 0px;    
       }
+
+
+    /* FOR THE ABOUT_ME SECTION */
+
+
+    .about_me_section{
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        margin: 30px 0;
+    }
+
+    .construction_title{
+        /* border: 1px solid black; */
+        color: #F89916;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .construction_title > h1{
+        font-size: 30px;
+    }
+    
+    .construction_title > h3{
+        font-size: 15px;
+    }
+
+
+    
+    /* .reverse_countdown{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+    } */
+    
+    .reverse_countdown > div{
+        margin-right: 7px;
+    
+    }
+    
+    
 
 }
 @media screen  and (min-width: 694px) and (max-width: 1024px){

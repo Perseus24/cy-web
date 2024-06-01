@@ -10,34 +10,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
     get_in_touch_btn.addEventListener('mouseover', () => {
         explore_me_btn.style.backgroundColor = 'white';
         explore_me_btn.style.color = '#512DCD';
-    })
+    });
 
     get_in_touch_btn.addEventListener('mouseout', () => {
         explore_me_btn.style.backgroundColor = '';
         explore_me_btn.style.color = '';
-    })
+    });
 
     explore_me_btn.addEventListener('mouseover', () => {
         get_in_touch_btn.style.backgroundColor = 'transparent';
         get_in_touch_btn.style.color = 'white';
         get_in_touch_btn.style.border = '1px solid white';
-    })
+    });
 
     explore_me_btn.addEventListener('mouseout', () => {
         get_in_touch_btn.style.backgroundColor = '';
         get_in_touch_btn.style.color = '';
         get_in_touch_btn.style.border = '';
-    })
+    });
 
     hovered_nav.addEventListener('mouseover', () => {
         active_nav.style.borderBottom = '0px solid white';
-    })
+    });
 
     hovered_nav.addEventListener('mouseout', () => {
         active_nav.style.borderBottom = '';
-    })
+    });
 
-})
+});
 
 function myFunction() {
     var showNav = document.querySelector('header nav');
@@ -47,6 +47,31 @@ function myFunction() {
         showNav.style.display = "block";
     }
 }
+
+function reverseCountdown() {
+
+    const startDate = new Date('June 1, 2024 9:00:00');
+    const now = Date.now();
+    const afterTime = now - startDate;
+
+
+
+    var days = Math.floor(afterTime / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((afterTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((afterTime % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((afterTime % (1000 * 60)) / 1000);
+
+
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('seconds').innerText = seconds;
+
+}
+
+setInterval(reverseCountdown, 1000);
+
+reverseCountdown();
 
 // window.addEventListener('resize', function () {
 
