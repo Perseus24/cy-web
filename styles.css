@@ -745,14 +745,14 @@ nav{
 
 
     
-    /* .reverse_countdown{
+    .reverse_countdown{
         margin-top: 20px;
-        display: grid;
-        grid-template-columns: auto auto;
-    } */
+        display: flex;
+        flex-direction: column;
+    }
     
     .reverse_countdown > div{
-        margin-right: 7px;
+        margin-bottom: 7px;
     
     }
     
