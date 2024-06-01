@@ -482,8 +482,7 @@ nav{
     justify-content: start;
 }
 
-.reverse_countdown > div > p,
-.reverse_countdown > div > h1{
+.reverse_countdown > div > p{
     width: 100%;
     margin: 0;
     text-align: center;
