@@ -510,6 +510,7 @@ nav{
 
 @media screen  and (max-width: 693px){
 
+
     /* * {
         border: 1px solid black;
     } */
@@ -731,6 +732,7 @@ nav{
         color: #F89916;
         align-items: center;
         margin-top: 20px;
+        width: 100vw;
     }
     
     .construction_title > h1{
